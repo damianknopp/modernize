@@ -1,0 +1,10 @@
+query FindAllVets {
+  findAllVets {
+    id
+    firstName
+    lastName
+    specialties {
+      name
+    }
+  }
+}

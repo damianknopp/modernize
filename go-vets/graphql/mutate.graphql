@@ -1,0 +1,31 @@
+mutation {
+    upsertVet(input: {
+      firstName: "John"
+      lastName: "Smith"
+      specialties: [
+        {
+          name: SURGERY
+        },
+        {
+          name: DENTISTRY
+        }
+      ]
+    })
+}
+
+
+mutation {
+  upsertVet(input: {
+    firstName: "Mary"
+    lastName: "O'Neil"
+    specialties: [
+      {
+        name: ORTHOPEDICS
+      },
+      {
+        name: ANESTHESIA
+      }
+    ]
+  })
+}
+

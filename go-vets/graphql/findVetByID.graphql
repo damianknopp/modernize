@@ -1,0 +1,10 @@
+query {
+  findVetByID(id: 1) {
+    id
+    firstName
+    lastName
+    specialties {
+      name
+    }
+  }
+}

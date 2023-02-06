@@ -1,0 +1,41 @@
+type Query {
+  findVetByID(id:ID!): Vet
+  findAllVets: [Vet]!
+}
+
+type Mutation {
+  upsertVet(input: VetInput!): Vet!
+}
+
+type Vet {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  specialties: [Specialty!]!
+}
+
+input VetInput {
+  id: ID
+  firstName: String!
+  lastName: String!
+  specialties: [SpecialtyInput!]!
+}
+
+type Specialty {
+  name: SpecialtyType!
+}
+
+input SpecialtyInput {
+  name: SpecialtyType!
+}
+
+enum SpecialtyType {
+  "fix teeth"
+  DENTISTRY
+  "slice and sew"
+  SURGERY
+  "numb and sleep"
+  ANESTHESIA
+  "bones"
+  ORTHOPEDICS
+}
